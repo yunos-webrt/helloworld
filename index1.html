@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="pragma" content="no-cache" />
+<title>一个简单的WebApp代码实例</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="style/themes/default/jquery.mobile-1.3.1.min.css">
+<style>
+.ui-li .ui-btn-inner a.ui-link-inherit,.ui-li-static.ui-li {
+	display: block !important;
+	padding: 0em 75px 0.9em 15px !important;
+}
+
+div.ui-slider-switch {
+	position: absolute !important;
+	right: 0 !important;
+}
+</style>
+<script type="text/javascript">
+	console.log('version1');
+	navigator.tglDebug.enable();
+</script>
+</head>
+<body>
+
+	<div data-role="page" id="mainPage" data-theme="a">
+		<div data-theme="a" data-role="header">
+			<h3>选项列表</h3>
+			<ul data-role="listview" data-divider-theme="b" data-inset="true">
+				<li data-role="list-divider" role="heading">列表一</li>
+				<li data-role="fieldcontain"><label for="developer-mode-slider">
+						启动计时 </label> <select id="counter-slider" data-role="slider"
+					name="counter-slider">
+						<option value="off">off</option>
+						<option value="on">on</option>
+				</select></li>
+			</ul>
+			<ul data-role="listview" data-divider-theme="b" data-inset="true">
+				<li data-role="list-divider" role="heading">列表二</li>
+				<li data-role="fieldcontain"><label for="developer-mode-slider">
+						查看时间 </label> <select id="time-slider" data-role="slider"
+					name="time-slider">
+						<option value="off">off</option>
+						<option value="on">on</option>
+				</select></li>
+			</ul>
+		</div>
+		<div data-role="content" id="runHtml"></div>
+	</div>
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/jquery.mobile-1.3.1.min.js"></script>
+<script defer src="js/helloworld.js"></script>
+</html>
+
